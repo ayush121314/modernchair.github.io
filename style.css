@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+    overscroll-behavior: none;
+    background-color: rgb(213, 133, 146);
+    overflow-y: visible;
+}
+.wrapper{
+    width: 100vw;
+    height:80vh;
+}
+.container{
+    margin-top: 20vh;
+    position: relative;
+    height: fit-content;
+}
+.text{
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 50vw;
+    margin-right: 0vw;
+    width: 34vw;
+}
+.but1,.but2{
+  position: absolute;
+  z-index: -1;
+}
+.cont1{
+   opacity: 0;
+   position: absolute;
+   font-weight: 500px;
+   height: fit-content;
+}
+.cont2{
+    opacity: 0;
+    position: absolute;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+}
+.but1~label:hover{
+    cursor: pointer;
+}
+.but1~label:hover{
+   color: blue;
+}
+.des{
+    position: relative;
+    
+}
+#desid1:checked~.deslabel2
+{
+    opacity: 0.5;
+}
+#desid1:not(:checked)~.deslabel1
+{
+    opacity: 0.5;
+}
+#desid1:checked~.cont1{
+    opacity: 1;
+    transform: translateY(-3px); 
+    transition-duration: 1s;
+}
+#desid2:checked~.cont2{
+    opacity: 1;
+    transform: translateY(-3px); 
+    transition-duration: 1s;
+}
+.chcol{
+    position:relative ;
+    margin-top:10vh ;
+    font-size: 40px;
+}
+.buttonc{
+    position: relative;
+    margin-top: 20px;
+}
+.butc{
+    position:absolute;
+    z-index: -1;
+}
+.butc:checked+label{
+    border: 4px solid black;
+    height: 58px;
+    display: inline-block;
+    transform: scale(1.1);
+}
+.butc+label:hover{
+    cursor: pointer;
+}
+.image2{
+    position: absolute;
+    visibility:hidden; 
+    translate: -600px -400px;
+}
+#butc1:checked~.img1{
+    visibility: visible;
+    animation: shake 0.7s ;
+}
+#butc2:checked~.img2{
+    visibility: visible;
+    animation: shake 0.7s  ;
+}
+#butc3:checked~.img3{
+    visibility: visible;
+     animation: shake 0.7s ;
+}
+#butc4:checked~.img4{
+    visibility: visible;
+    animation: shake 0.7s;
+}
+#butc5:checked~.img5{
+    visibility: visible;
+    animation: shake 0.7s ;
+}
+#butc6:checked~.img6{
+    visibility: visible;
+    animation: shake 0.7s ;
+}
+@keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0) rotate(-1deg);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0) rotate(2deg);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-3px, 0, 0) rotate(-3deg);
+    }
+    40%,
+    60% {
+      transform: translate3d(3px, 0, 0) rotate(3deg);
+    }
+  }
+  .butadd{
+    font-size: 20px;
+    margin-top: 30px;
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    padding-left: 34px;
+    padding-right: 34px;
+    border-radius: 10px;
+  }
+  .butadd:hover{
+    background-color: black!important;
+    cursor: pointer;
+    transform: scale(1.1);
+    border-radius: 10px;
+   
+  }
+#butc1:checked~.butadd{
+    background-color: brown;
+}
+#butc3:checked~.butadd{
+    background-color: rgb(42, 134, 165);
+}
+#butc4:checked~.butadd{
+    background-color: rgba(42, 138, 165, 0.611);
+}
+#butc5:checked~.butadd{
+    background-color: rgba(52, 174, 92, 0.385);
+}
+#butc6:checked~.butadd{
+    background-color: rgba(117, 200, 113, 0.545);
+}
+@media(max-width:1075px)
+{
+    .text{
+        margin-top: 600px;
+        margin-right: 30vw;
+        margin-left: 30vw;
+        width: 500px;
+    }
+    .image2{
+    
+        translate: -70px -810px;
+    }
+  
+}
